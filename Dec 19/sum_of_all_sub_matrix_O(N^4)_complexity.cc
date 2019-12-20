@@ -7,10 +7,10 @@ using namespace std;
 int a[10][10];
 
 int subMatrix(int s,int e,int u,int l){
-	if(s>0&&u>0)	return a[e][l]+a[s-1][u-1]-a[e][u-1]-a[s-1][l];
-	else if(u==0)	return a[l][e]-a[l][s-1];
-	else if(s==0)	return a[l][e]-a[u-1][e];
-	return 0;
+	if(s>0 and u>0)	return a[e][l]+a[s-1][u-1]-a[e][u-1]-a[s-1][l];
+	else if(u==0 and s!=0)	return a[l][e]-a[l][s-1];
+	else if(s==0 and u!=0)	return a[l][e]-a[u-1][e];
+	else return a[l][e];
 }
 
 int main(){
